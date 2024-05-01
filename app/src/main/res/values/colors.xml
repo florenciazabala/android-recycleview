@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pure_black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#C244D8</color>
+    <color name="blue">#805FF4</color>
+
+    <color name="gradient_start">#FD61C4</color>
+    <color name="gradient_end">#A678FB</color>
+
+    <!--#FF7C4A74 #FFFA798D #531331 #3F0021 #FA798D-->
+    <color name="landscape_primary_color">@color/gradient_start</color>
+    <color name="landscape_secondary_color">@color/gradient_end</color>
+    <color name="landscape_third_color">#531331</color> <!-- Don't change -->
+    <color name="landscape_color_water">@color/gradient_end</color>
+</resources>

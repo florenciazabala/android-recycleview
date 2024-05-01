@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ChallengeClase1</string>
+    <string name="registrer_view_title">Register</string>
+    <string name="registrer_view_email_label_txt">Email address</string>
+    <string name="registrer_view_password_label_txt">Create Password</string>
+    <string name="registrer_view_btn_txt">Next</string>
+    <string name="background">Background image</string>
+    <string name="registrer_view_alias_label_txt">Alias</string>
+    <string name="welcome_title">Hi %s!</string>
+    <string name="title">Sample title</string>
+    <string name="author">Jane Doe</string>
+
+    <string name="profile_first_tab">Summer</string>
+    <string name="profile_sencond_tab">Winter</string>
+
+    <string-array name="tabs">
+        <item>Summer</item>
+        <item>Winter</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
