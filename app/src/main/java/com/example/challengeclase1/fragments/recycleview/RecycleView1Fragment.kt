@@ -1,5 +1,6 @@
 package com.example.challengeclase1.fragments.recycleview
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,12 +10,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.challengeclase1.R
+import com.example.challengeclase1.activities.MuseumObjectDetail
 import com.example.challengeclase1.adapters.ColorAdapter
 import com.example.challengeclase1.adapters.MuseumObjectAdapter
 import com.example.challengeclase1.entities.Color
+import com.example.challengeclase1.entities.MuseumObject
+import com.example.challengeclase1.listeners.OnViewProfile
 import com.example.challengeclase1.service.MuseumServiceImpl
 
-class RecycleView1Fragment : Fragment() {
+class RecycleView1Fragment : Fragment(), OnViewProfile {
 
     //var colorsList: MutableList<Color> = ArrayList();
     val museumObjects = MuseumServiceImpl.getItems();
@@ -49,7 +53,7 @@ class RecycleView1Fragment : Fragment() {
 
         manager = LinearLayoutManager(context) //Horizontal o vertical
         //colorAdapter = ColorAdapter(colorsList)
-        museumAdapter = MuseumObjectAdapter(museumObjects)
+        museumAdapter = MuseumObjectAdapter(museumObjects, this)
 
         recyclerView.layoutManager = manager
         //recyclerView.adapter = colorAdapter
@@ -57,6 +61,11 @@ class RecycleView1Fragment : Fragment() {
 
     }
 
+    override fun onViewItemDetail(museumObject: MuseumObject){
+        val intent = Intent(context, MuseumObjectDetail::class.java);
+        intent.putExtra("museumItem",museumObject);
+        startActivity(intent);
+    }
 
     /*fun fillColorList() {
         colorsList.add(Color("purple", "#DA8DD7"))
